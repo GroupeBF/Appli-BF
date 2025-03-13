@@ -1,0 +1,56 @@
+{
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import AccueilScreen from './screens/AccueilScreen';
+import RamassageScreen from './screens/RamassageScreen';
+import InfosUserScreen from './screens/InfosUserScreen';
+import DevisScreen from './screens/DevisScreen';
+import NouveautesScreen from './screens/NouveautesScreen';
+import AvisScreen from './screens/AvisScreen';
+
+const Stack = createStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Accueil" component={AccueilScreen} />
+        <Stack.Screen name="Ramassage" component={RamassageScreen} />
+        <Stack.Screen name="Informations Utilisateur" component={InfosUserScreen} />
+        <Stack.Screen name="Devis" component={DevisScreen} />
+        <Stack.Screen name="Nouveautés" component={NouveautesScreen} />
+        <Stack.Screen name="Avis Clients" component={AvisScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+  "expo": {
+    "name": "MonApp",
+    "slug": "MonApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
